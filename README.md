@@ -42,7 +42,8 @@ Esta información se guarda sobre la **carga** (esto es lo mínimo extraído de 
 En el caso de que la carga sea entregado por una **ETN**, el *manifiesto* no está estandarizado.
 Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 
-> [!NOTE] Nota del editor
+> [!NOTE]
+> Nota del editor:
 > A nivel de programación, esto es una complejidad un tanto ilusioria.
 > En un escenario limpio el programa debería ser lo más agnóstico posible.
 > Da igual si el manifiesto viene de un barco o de un camión.
@@ -96,11 +97,11 @@ Este reporte se hace individualmente por cliente, exclusivamente con la carga qu
 *Beetracer* es un software como servicio (SaaS), esta es arrendada al *TEP*, pues es quien le interesan estos reportes.
 
 # Vocabulario
-*Carga*: Son todos los bienes que traen las *ETE*.
-*Consolidado*: La acción de abrir el contenedor para validar su *manifiesto*, hacer procedimientos legales y enviar *carga* a los clientes.
-*ETE*: Entidad Transportadora Exterior. Es el barco o cualquier otro transporte que lleva *carga* al país para ser recepcionado por aduanas.
-*ETN*: Entidad Transportadora Nacional. Es el camión o cualquier otro transporte que lleva *carga* a otro almacen dentro del país.
-*Manifiesto*: Detalle de *carga* (archivo xml) que lleva una *ETE*, es enviado a aduanas y descargado por *Beetracer* en su DB.
-*PAN*: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *consolidado*.
-*PCD*: Producto-Cantidad-Dueño. Formato en la que la app movil de *Beetracer* muestra el *manifiesto* descargado para validar la *carga* y actualizar la logística.
-*TEP*: Terminal Extraportuario. Donde la *carga* llega luego de pasar por los *PAN*, acá se usa la app movil de *Beetracer* para validar la *carga*.
+- *Carga*: Son todos los bienes que traen las *ETE*.
+- *Consolidado*: La acción de abrir el contenedor para validar su *manifiesto*, hacer procedimientos legales y enviar *carga* a los clientes.
+- *ETE*: Entidad Transportadora Exterior. Es el barco o cualquier otro transporte que lleva *carga* al país para ser recepcionado por aduanas.
+- *ETN*: Entidad Transportadora Nacional. Es el camión o cualquier otro transporte que lleva *carga* a otro almacen dentro del país.
+- *Manifiesto*: Detalle de *carga* (archivo xml) que lleva una *ETE*, es enviado a aduanas y descargado por *Beetracer* en su DB.
+- *PAN*: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *consolidado*.
+- *PCD*: Producto-Cantidad-Dueño. Formato en la que la app movil de *Beetracer* muestra el *manifiesto* descargado para validar la *carga* y actualizar la logística.
+- *TEP*: Terminal Extraportuario. Donde la *carga* llega luego de pasar por los *PAN*, acá se usa la app movil de *Beetracer* para validar la *carga*.
