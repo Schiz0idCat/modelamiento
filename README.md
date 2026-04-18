@@ -18,8 +18,8 @@ el **operador debe sacar una foto de comprobación de la carga** y el camión se
 # Proceso Interno
 ## 1 Analizar el Contexto
 Hay dos caminos iniciales desde los que *Beetracer* empieza a trabajar:
-1. Que el **ETE** sea un barco internacional con un **manifiesto** con toda la información de la carga.
-2. Que la carga llegue por un camión intranacional (ETN) directamente al cliente.
+1. Que el **ETE** sea un barco internacional con un **manifiesto** con toda la información de la **carga**.
+2. Que la **carga** llegue por un camión intranacional (ETN) directamente al cliente.
 
 El primer camino es más sencillo en términos de que está estandarizado, todos los **ETE** usan el mismo modelo de **manifiesto**.
 Sin embargo, en el caso de la **ETN**, cada proveedor usa su propio formato de **manifiesto**,
@@ -39,7 +39,7 @@ Esta información se guarda sobre la **carga** (esto es lo mínimo extraído de 
 5. Cuándo llega.
 
 ## 2.2 Manejo de Manifiesto Diferente o Ausente
-En el caso de que la carga sea entregado por una **ETN**, el *manifiesto* no está estandarizado.
+En el caso de que la **carga** sea entregado por una **ETN**, el *manifiesto* no está estandarizado.
 Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 
 > [!NOTE]
@@ -58,16 +58,16 @@ Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 
 ## 3 Consolidado
 El consolidado se puede hacer con o sin **manifiesto**.
-Si existe información previe en la base de datos, lo descrito a continuación debe ser interpretado como un proceso de validación de la carga.
+Si existe información previe en la base de datos, lo descrito a continuación debe ser interpretado como un proceso de validación de la **carga**.
 En caso contrario, el proceso de consolidado no es más que la creación a tiempo real del **manifiesto** faltante.
 
-Como bonus, si existe el **manifiesto**, *Beetracer* sabe qué carga esperar, y puede programar el **consolidado** con fecha inicial y final.
+Como bonus, si existe el **manifiesto**, *Beetracer* sabe qué **carga** esperar, y puede programar el **consolidado** con fecha inicial y final.
 
 Para hacer el **consolidado** (sea para validar o para generar el manifiesto), se deben asignar dos roles:
 1. Quien descarga: todos los bienes desde el contenedor.
 2. Quien valida: desde la app movil para validar o registrar los bienes del contenedor.
 
-La carga puede venir en diferentes estados (estos estados se declaran desde la app movil):
+La **carga** puede venir en diferentes estados (estos estados se declaran desde la app movil):
 1. Perfecto estado.
 2. Dañado.
 3. Faltante. (este estado no se menciona en la charla. Se entiende que si partimos sin manifiesto inicial, este estado no es posible).
@@ -75,13 +75,13 @@ La carga puede venir en diferentes estados (estos estados se declaran desde la a
 Una vez se termina el consolidado, se cierra el contenedor y se devuelve por donde vino.
 
 Cuando ya se tiene constancia de todos los vienes puede pasar una de dos cosas:
-1. El cliente llega a buscar su carga.
-2. El cliente no llega a buscar su carga y se manda a bodega del **TEP**. Cobran por día de uso.
+1. El cliente llega a buscar su **carga**.
+2. El cliente no llega a buscar su **carga** y se manda a bodega del **TEP**. Cobran por día de uso.
 
 Luego de todo esto, desde la app movil de cierra el proceso del consolidado con observaciones finales.
 Todo este registro se envía a la base de datos de *Beetracer* para poder comparar lo esperado con lo que llegó.
-A partir de esto, se genera un reporte en pdf que contiene las fotos, fechas, trabajadores, información sobre la carga, etc.
-Este reporte se hace individualmente por cliente, exclusivamente con la carga que le corresponde, esto para poder enviarselo por email.
+A partir de esto, se genera un reporte en pdf que contiene las fotos, fechas, trabajadores, información sobre la **carga**, etc.
+Este reporte se hace individualmente por cliente, exclusivamente con la **carga** que le corresponde, esto para poder enviarselo por email.
 
 > [!IMPORTANT]
 > Solamenta la validación de la descarga se hace desde la app movil.
@@ -95,14 +95,14 @@ Este reporte se hace individualmente por cliente, exclusivamente con la carga qu
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
 
 # Modelo de Negocio
-*Beetracer* es un software como servicio (SaaS), esta es arrendada al *TEP*, pues es quien le interesan estos reportes.
+*Beetracer* es un software como servicio (SaaS), esta es arrendada al **TEP**, pues es quien le interesan estos reportes.
 
 # Vocabulario
-- *Carga*: Son todos los bienes que traen las *ETE*.
-- *Consolidado*: La acción de abrir el contenedor para validar su *manifiesto*, hacer procedimientos legales y enviar *carga* a los clientes.
-- *ETE*: Entidad Transportadora Exterior. Es el barco o cualquier otro transporte que lleva *carga* al país para ser recepcionado por aduanas.
-- *ETN*: Entidad Transportadora Nacional. Es el camión o cualquier otro transporte que lleva *carga* a otro almacen dentro del país.
-- *Manifiesto*: Detalle de *carga* (archivo xml) que lleva una *ETE*, es enviado a aduanas y descargado por *Beetracer* en su DB.
-- *PAN*: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *consolidado*.
-- *PCD*: Producto-Cantidad-Dueño. Formato en la que la app movil de *Beetracer* muestra el *manifiesto* descargado para validar la *carga* y actualizar la logística.
-- *TEP*: Terminal Extraportuario. Donde la *carga* llega luego de pasar por los *PAN*, acá se usa la app movil de *Beetracer* para validar la *carga*.
+- ***Carga***: Son todos los bienes que traen las *ETE*.
+- ***Consolidado***: La acción de abrir el contenedor para validar su *manifiesto*, hacer procedimientos legales y enviar *carga* a los clientes.
+- ***ETE***: Entidad Transportadora Exterior. Es el barco o cualquier otro transporte que lleva *carga* al país para ser recepcionado por aduanas.
+- ***ETN***: Entidad Transportadora Nacional. Es el camión o cualquier otro transporte que lleva *carga* a otro almacen dentro del país.
+- ***Manifiesto***: Detalle de *carga* (archivo xml) que lleva una *ETE*, es enviado a aduanas y descargado por *Beetracer* en su DB.
+- ***PAN***: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *consolidado*.
+- ***PCD***: Producto-Cantidad-Dueño. Formato en la que la app movil de *Beetracer* muestra el *manifiesto* descargado para validar la *carga* y actualizar la logística.
+- ***TEP***: Terminal Extraportuario. Donde la *carga* llega luego de pasar por los *PAN*, acá se usa la app movil de *Beetracer* para validar la *carga*.
