@@ -45,10 +45,11 @@ Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 > [!NOTE]
 > Nota del editor:
 > A nivel de programación, esto es una complejidad un tanto ilusioria.
-> En un escenario limpio el programa debería ser lo más agnóstico posible.
+> En un escenario limpio, el programa debería ser lo más agnóstico posible.
 > Da igual si el manifiesto viene de un barco o de un camión.
 > Da igual si tiene un formato u otro.
 > Incluso es un tanto indiferente si el manifiesto siquiera existe o no.
+> 
 > Para todo esto, la solución es el patrón Adapter.
 > Acá se define un único manifiesto que es la fuente de verdad para nuestro programa.
 > Y a este manifiesto se le crean adaptadores para traducir desde cualquier formato a nuestro tipo de manifiesto.
