@@ -24,7 +24,7 @@ Hay dos caminos iniciales desde los que *Beetracer* empieza a trabajar:
 El primer camino es más sencillo en términos de que está estandarizado, todos los **ETE** usan el mismo modelo de **manifiesto**.
 Sin embargo, en el caso de la **ETN**, cada proveedor usa su propio formato de **manifiesto**,
 por lo que el sistema se debe adaptar a todos estos casos.
-Teniendo especial cuidado cuando el proveedor no tiene sistema, o no tiene uno al que *Beetracer* no se pueda ajustar.
+Teniendo especial cuidado cuando el proveedor no tiene sistema, o no tiene uno al que *Beetracer* se pueda ajustar.
 
 ## 2 Gestión del Manifiesto
 ## 2.1 Descarga del Manifiesto
