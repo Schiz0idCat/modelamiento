@@ -1,4 +1,3 @@
-minuto 26
 # Proceso General
 Un barco, de ahora en adelante **Entidad Transportadora Exterior** (ETE) para generalizar,
 llevan un **manifiesto** que contiene toda la información con respecto a la **carga** (**archivo xml**).
@@ -54,7 +53,7 @@ Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 > Acá se define un único manifiesto que es la fuente de verdad para nuestro programa.
 > Y a este manifiesto se le crean adaptadores para traducir desde cualquier formato a nuestro tipo de manifiesto.
 > ¿Y si no hay manifiesto?
-> Esto es tan sencillo como dos clases que hereden de un padre común, una que considere la existencia de un consolidado y la otra no.
+> Esto es tan sencillo como dos clases que hereden de un padre común, una que considere la existencia de un manifiesto y la otra no.
 
 ## 3 Consolidado
 El consolidado se puede hacer con o sin **manifiesto**.
@@ -93,6 +92,7 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 > 2. Al abrir el contenedor, se saca fotos al estado inicial interior. Esto antes de sacar nada.
 > 3. Cuando se hace el consolidado, se saca foto a cada bien individualmente.
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
+> Además, las fotos se suben una por una al servidor mientras se realizan.
 
 # Modelo de Negocio
 *Beetracer* es un software como servicio (SaaS), esta es arrendada al **TEP**, pues es quien le interesan estos reportes.
