@@ -94,9 +94,6 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
 > Además, las fotos se suben una por una al servidor mientras se realizan.
 
-# Modelo de Negocio
-*Beetracer* es un software como servicio (SaaS), esta es arrendada al **TEP**, pues es quien le interesan estos reportes.
-
 # Vocabulario
 - ***Carga***: Son todos los bienes que traen las *ETE*.
 - ***Consolidado***: La acción de abrir el contenedor para validar su *manifiesto*, hacer procedimientos legales y enviar *carga* a los clientes.
