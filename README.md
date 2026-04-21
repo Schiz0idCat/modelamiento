@@ -1,12 +1,12 @@
 # Índice
 - [Proceso General](#proceso-general)
 - [Proceso Interno](#proceso-interno)
-    - [1 Analizar el Contexto](#1-analizar-el-contexto)
-    - [2 Gestión del Manifiesto](#2-gestión-del-manifiesto)
-        - [2.1 Descarga del Manifiesto](#21-descarga-del-manifiesto)
-        - [2.2 Manejo de Manifiesto Diferente o Ausente](#22-manejo-de-manifiesto-diferente-o-ausente)
-    - [3 Desconsolidado](#3-desconsolidado)
-    - [4 Reporte](#4-reporte)
+    - [1. Analizar el Contexto](#1.-analizar-el-contexto)
+    - [2. Gestión del Manifiesto](#2.-gestión-del-manifiesto)
+        - [2.1. Descarga del Manifiesto](#21.-descarga-del-manifiesto)
+        - [2.2. Manejo de Manifiesto Diferente o Ausente](#22.-manejo-de-manifiesto-diferente-o-ausente)
+    - [3. Desconsolidado](#3.-desconsolidado)
+    - [4. Reporte](#4.-reporte)
 - [Vocabulario](#vocabulario)
 
 ---
@@ -28,7 +28,7 @@ Acá aparece el listado **producto-cantidad-dueño** (PCD),
 el **operador debe sacar una foto de comprobación de la carga** y el camión se lo lleva al cliente.
 
 # Proceso Interno
-## 1 Analizar el Contexto
+## 1. Analizar el Contexto
 Hay dos caminos iniciales desde los que *Beetracer* empieza a trabajar:
 1. Que el **ETE** sea un barco internacional con un **manifiesto** con toda la información de la **carga**.
 2. Que la **carga** llegue por un camión intranacional (ETN) directamente al cliente.
@@ -38,8 +38,8 @@ Sin embargo, en el caso de la **ETN**, cada proveedor usa su propio formato de *
 por lo que el sistema se debe adaptar a todos estos casos.
 Teniendo especial cuidado cuando el proveedor no tiene sistema, o no tiene uno al que *Beetracer* se pueda ajustar.
 
-## 2 Gestión del Manifiesto
-## 2.1 Descarga del Manifiesto
+## 2. Gestión del Manifiesto
+## 2.1. Descarga del Manifiesto
 La **ETE** de entrega los **manifiestos** aduanas, y esta los expone en un *servicio web de acceso privilegiado*.
 **Beetracer tiene permisos** para descargar los xml de los manifiestos y guardarlos en su base de datos.
 
@@ -50,7 +50,7 @@ Esta información se guarda sobre la **carga** (esto es lo mínimo extraído de 
 4. A quién pertenece.
 5. Cuándo llega.
 
-## 2.2 Manejo de Manifiesto Diferente o Ausente
+## 2.2. Manejo de Manifiesto Diferente o Ausente
 En el caso de que la **carga** sea entregado por una **ETN**, el *manifiesto* no está estandarizado.
 Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 
@@ -68,7 +68,7 @@ Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 > ¿Y si no hay manifiesto?
 > Esto es tan sencillo como dos clases que hereden de un padre común, una que considere la existencia de un manifiesto y la otra no.
 
-## 3 Desconsolidado
+## 3. Desconsolidado
 El desconsolidado se puede hacer con o sin **manifiesto**.
 Si existe información previe en la base de datos, lo descrito a continuación debe ser interpretado como un proceso de validación de la **carga**.
 En caso contrario, el proceso de desconsolidado no es más que la creación a tiempo real del **manifiesto** faltante.
@@ -107,7 +107,7 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
 > Además, las fotos se suben una por una al servidor mientras se realizan.
 
-## 4 Reporte
+## 4. Reporte
 Con toda la información recopilada se envía un informe (pdf) al cliente.
 
 Se especifica lo siguiente:
