@@ -1,12 +1,12 @@
 # Índice
 - [Proceso General](#proceso-general)
 - [Proceso Interno](#proceso-interno)
-    - [1. Analizar el Contexto](#1.-analizar-el-contexto)
-    - [2. Gestión del Manifiesto](#2.-gestión-del-manifiesto)
-        - [2.1. Descarga del Manifiesto](#21.-descarga-del-manifiesto)
-        - [2.2. Manejo de Manifiesto Diferente o Ausente](#22.-manejo-de-manifiesto-diferente-o-ausente)
-    - [3. Desconsolidado](#3.-desconsolidado)
-    - [4. Reporte](#4.-reporte)
+    - [1. Analizar el Contexto](#1-analizar-el-contexto)
+    - [2. Gestión del Manifiesto](#2-gestión-del-manifiesto)
+        - [2.1. Descarga del Manifiesto](#21-descarga-del-manifiesto)
+        - [2.2. Manejo de Manifiesto Diferente o Ausente](#22-manejo-de-manifiesto-diferente-o-ausente)
+    - [3. Desconsolidado](#3-desconsolidado)
+    - [4. Reporte](#4-reporte)
 - [Vocabulario](#vocabulario)
 
 ---
