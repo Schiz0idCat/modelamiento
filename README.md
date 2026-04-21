@@ -94,7 +94,7 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
 > Además, las fotos se suben una por una al servidor mientras se realizan.
 
-# Reporte
+## 4 Reporte
 Con toda la información recopilada se envía un informe (pdf) al cliente.
 
 Se especifica lo siguiente:
