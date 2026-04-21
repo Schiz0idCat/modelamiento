@@ -94,6 +94,23 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
 > Además, las fotos se suben una por una al servidor mientras se realizan.
 
+# Reporte
+Con toda la información recopilada se envía un informe (pdf) al cliente.
+
+Se especifica lo siguiente:
+1. En caso de haber manifiesto, se declara la diferencia entre lo esperado y lo que llegó.
+2. Todas las imágenes descritas anteriormente.
+3. El estado de cada paquete.
+
+> [!CAUTION]
+> Por seguridad, los informes no son envíados automáticamente.
+> Pasan por un proceso de revisión en la vista web.
+> Una vez el reporte es validado, se envía manualmente al cliente.
+
+> [!NOTE]
+> Si bien el informe tiene un formato estándar,
+> hay veces que los clientes exigen uno personalizado.
+
 # Vocabulario
 - ***Carga***: Son todos los bienes que traen las *ETE*.
 - ***Consolidado***: La acción de abrir el contenedor para validar su *manifiesto*, hacer procedimientos legales y enviar *carga* a los clientes.
