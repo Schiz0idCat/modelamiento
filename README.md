@@ -9,8 +9,8 @@ Cuando un barco llega a puerto, de ahora en adelante **Punto de Acceso Nacional*
 - Abrir contenedor y que cada cliente que lleve su **carga** (en desuso por crecimiento de comercio exterior y pequeño tamaño de puertos).
 - Camiones se llevan los contenedores a **Terminales extraportuarios** (TEP), acá están las oficinas aduaneras. Luego cada cliente se lleva su **carga**.
 
-Una vez el camión con la **carga** llega al **TEP**, se hace el **consolidado** (una faena), donde se abre el contenedor y se extrae su **carga**.
-En el proceso de **consolidado**, un **operador** usa la **app movil de Beetracer** para **validar la carga esperada**.
+Una vez el camión con la **carga** llega al **TEP**, se hace el **desconsolidado** (una faena), donde se abre el contenedor y se extrae su **carga**.
+En el proceso de **desconsolidado**, un **operador** usa la **app movil de Beetracer** para **validar la carga esperada**.
 Acá aparece el listado **producto-cantidad-dueño** (PCD),
 el **operador debe sacar una foto de comprobación de la carga** y el camión se lo lleva al cliente.
 
@@ -55,14 +55,14 @@ Por lo que pueden haber multiples formatos diferentes, o directamente no haber.
 > ¿Y si no hay manifiesto?
 > Esto es tan sencillo como dos clases que hereden de un padre común, una que considere la existencia de un manifiesto y la otra no.
 
-## 3 Consolidado
-El consolidado se puede hacer con o sin **manifiesto**.
+## 3 Desconsolidado
+El desconsolidado se puede hacer con o sin **manifiesto**.
 Si existe información previe en la base de datos, lo descrito a continuación debe ser interpretado como un proceso de validación de la **carga**.
-En caso contrario, el proceso de consolidado no es más que la creación a tiempo real del **manifiesto** faltante.
+En caso contrario, el proceso de desconsolidado no es más que la creación a tiempo real del **manifiesto** faltante.
 
-Como bonus, si existe el **manifiesto**, *Beetracer* sabe qué **carga** esperar, y puede programar el **consolidado** con fecha inicial y final.
+Como bonus, si existe el **manifiesto**, *Beetracer* sabe qué **carga** esperar, y puede programar el **desconsolidado** con fecha inicial y final.
 
-Para hacer el **consolidado** (sea para validar o para generar el manifiesto), se deben asignar dos roles:
+Para hacer el **desconsolidado** (sea para validar o para generar el manifiesto), se deben asignar dos roles:
 1. Quien descarga: todos los bienes desde el contenedor.
 2. Quien valida: desde la app movil para validar o registrar los bienes del contenedor.
 
@@ -71,13 +71,13 @@ La **carga** puede venir en diferentes estados (estos estados se declaran desde 
 2. Dañado.
 3. Faltante. (este estado no se menciona en la charla. Se entiende que si partimos sin manifiesto inicial, este estado no es posible).
 
-Una vez se termina el consolidado, se cierra el contenedor y se devuelve por donde vino.
+Una vez se termina el desconsolidado, se cierra el contenedor y se devuelve por donde vino.
 
 Cuando ya se tiene constancia de todos los vienes puede pasar una de dos cosas:
 1. El cliente llega a buscar su **carga**.
 2. El cliente no llega a buscar su **carga** y se manda a bodega del **TEP**. Cobran por día de uso.
 
-Luego de todo esto, desde la app movil de cierra el proceso del consolidado con observaciones finales.
+Luego de todo esto, desde la app movil de cierra el proceso del desconsolidado con observaciones finales.
 Todo este registro se envía a la base de datos de *Beetracer* para poder comparar lo esperado con lo que llegó.
 A partir de esto, se genera un reporte en pdf que contiene las fotos, fechas, trabajadores, información sobre la **carga**, etc.
 Este reporte se hace individualmente por cliente, exclusivamente con la **carga** que le corresponde, esto para poder enviarselo por email.
@@ -90,7 +90,7 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 > Por estándares de seguridad, desde la app movil se saca fotos en los siguientes momentos.
 > 1. Al sello que asegura el contenedor.
 > 2. Al abrir el contenedor, se saca fotos al estado inicial interior. Esto antes de sacar nada.
-> 3. Cuando se hace el consolidado, se saca foto a cada bien individualmente.
+> 3. Cuando se hace el desconsolidado, se saca foto a cada bien individualmente.
 > 4. Foto al contenedor cerrado cuando se termina la faenación.
 > Además, las fotos se suben una por una al servidor mientras se realizan.
 
@@ -100,6 +100,6 @@ Este reporte se hace individualmente por cliente, exclusivamente con la **carga*
 - ***ETE***: Entidad Transportadora Exterior. Es el barco o cualquier otro transporte que lleva *carga* al país para ser recepcionado por aduanas.
 - ***ETN***: Entidad Transportadora Nacional. Es el camión o cualquier otro transporte que lleva *carga* a otro almacen dentro del país.
 - ***Manifiesto***: Detalle de *carga* (archivo xml) que lleva una *ETE*, es enviado a aduanas y descargado por *Beetracer* en su DB.
-- ***PAN***: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *consolidado*.
+- ***PAN***: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *desconsolidado*.
 - ***PCD***: Producto-Cantidad-Dueño. Formato en la que la app movil de *Beetracer* muestra el *manifiesto* descargado para validar la *carga* y actualizar la logística.
 - ***TEP***: Terminal Extraportuario. Donde la *carga* llega luego de pasar por los *PAN*, acá se usa la app movil de *Beetracer* para validar la *carga*.
