@@ -140,5 +140,4 @@ Se especifica lo siguiente:
 - Operador web: Quien hace las gestiones administrativas desde la vista web.
 - Beetracer: El sistema que hace operaciones sin necesidad de interaccion con los usuarios.
 - Cliente: Quien arrienda la aplicación.
-- Aduana: Oficina de aduana que ofrece el manifiesto.
-- Transportista: Quien transporta los paquetes (internacional o nacionalmente).
+- Proveedor: Abstracción de quien ofrece el manifiesto y los paquetes.
