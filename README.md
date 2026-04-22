@@ -8,6 +8,7 @@
     - [3. Desconsolidado](#3-desconsolidado)
     - [4. Reporte](#4-reporte)
 - [Vocabulario](#vocabulario)
+- [Actores](#actores)
 
 ---
 
@@ -133,3 +134,11 @@ Se especifica lo siguiente:
 - ***PAN***: Punto de Acceso Nacional. Son puertos o similares donde llegan las *ETE* para el *desconsolidado*.
 - ***PCD***: Producto-Cantidad-Dueño. Formato en la que la app movil de *Beetracer* muestra el *manifiesto* descargado para validar la *carga* y actualizar la logística.
 - ***TEP***: Terminal Extraportuario. Donde la *carga* llega luego de pasar por los *PAN*, acá se usa la app movil de *Beetracer* para validar la *carga*.
+
+# Actores
+- Operador móvil: Quien hace todas las operaciones de validación desde la vista móvil.
+- Operador web: Quien hace las gestiones administrativas desde la vista web.
+- Beetracer: El sistema que hace operaciones sin necesidad de interaccion con los usuarios.
+- Cliente: Quien arrienda la aplicación.
+- Aduana: Oficina de aduana que ofrece el manifiesto.
+- Transportista: Quien transporta los paquetes (internacional o nacionalmente).
