@@ -32,7 +32,7 @@ el **operador debe sacar una foto de comprobación de la carga** y el camión se
 ## 1. Analizar el Contexto
 Hay dos caminos iniciales desde los que *Beetracer* empieza a trabajar:
 1. Que el **ETE** sea un barco internacional con un **manifiesto** con toda la información de la **carga**.
-2. Que la **carga** llegue por un camión intranacional (ETN) directamente al cliente.
+2. Que la **carga** llegue por un camión nacional (ETN) directamente al cliente.
 
 El primer camino es más sencillo en términos de que está estandarizado, todos los **ETE** usan el mismo modelo de **manifiesto**.
 Sin embargo, en el caso de la **ETN**, cada proveedor usa su propio formato de **manifiesto**,
